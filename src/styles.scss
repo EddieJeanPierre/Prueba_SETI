@@ -1,0 +1,27 @@
+@use "themes" as *;
+
+@use "@nebular/theme/styles/globals" as *;
+
+@include nb-install() {
+  @include nb-theme-global();
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+nav {
+  align-items: center;
+  justify-content: flex-start;
+  display: block !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

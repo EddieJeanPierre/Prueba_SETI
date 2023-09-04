@@ -1,0 +1,12 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-header [compactMenu]="compactMenu"></app-header>
+  </nb-layout-header>
+  <nb-layout-footer></nb-layout-footer>
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+  <nb-sidebar state="collapsed">
+    <app-menu-sidebar></app-menu-sidebar>
+  </nb-sidebar>
+</nb-layout>

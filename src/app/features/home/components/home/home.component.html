@@ -1,0 +1,33 @@
+<nb-card>
+  <nb-card-header>Matriz DNA</nb-card-header>
+  <nb-card-body>
+    <input
+      type="text"
+      nbInput
+      fullWidth
+      fieldSize="small"
+      [value]="dnaString"
+      [(ngModel)]="dnaString"
+      (keyup)="inputEdited()"
+      id="dnaString"
+      minlength="36"
+      maxlength="36"
+    />
+    <label for="dnaString" *ngIf="valueEdited && minLen">
+      La cadena no está completa
+    </label>
+    <label for="dnaString" *ngIf="valueEdited && maxLen">
+      La cadena excede el limite de caracteres permitidos
+    </label>
+    <table *ngIf="showMatrix" class="table table-sm table-responsive-sm mt-3">
+      <tbody>
+        <tr *ngFor="let rowData of matrix; let i = index">
+          <td *ngFor="let item of rowData; let j = index">
+            {{ matrix[i][j] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <label *ngIf="showMatrix && (isMutantCol || isMutantRow)">Mutante</label>
+  </nb-card-body>
+</nb-card>

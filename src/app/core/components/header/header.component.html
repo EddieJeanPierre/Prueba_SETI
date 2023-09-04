@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <button nbButton ghost (click)="toggleSideBar()" type="button" title="Menú">
+        <nb-icon icon="menu"></nb-icon>
+      </button>
+    </div>
+    <div class="col text-center">
+      <a nbButton ghost routerLink="/">Prueba Técnica SETI</a>
+    </div>
+    <div class="col text-right">
+      <button nbButton ghost (click)="toggleThme()">
+        {{ darkThemeActive ? "light" : "dark" }}
+        <nb-icon icon="color-palette"></nb-icon>
+      </button>
+    </div>
+  </div>
+</div>
